@@ -1,0 +1,11 @@
+### 通过授权码申请令牌
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=authorization_code&code=TkEV5c&redirect_uri=http://www.51xuecheng.cn
+
+### 通过账号密码申请令牌
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username=admin&password=111111
+
+###校验jwt令牌
+POST {{auth_host}}/auth/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsieHVlY2hlbmctcGx1cyJdLCJ1c2VyX25hbWUiOiJ7XCJjcmVhdGVUaW1lXCI6XCIyMDIyLTA5LTI4VDA4OjMyOjAzXCIsXCJpZFwiOlwiNDhcIixcIm5hbWVcIjpcIuezu-e7n-euoeeQhuWRmFwiLFwic2V4XCI6XCIxXCIsXCJzdGF0dXNcIjpcIjFcIixcInVzZXJuYW1lXCI6XCJhZG1pblwiLFwidXR5cGVcIjpcIjEwMTAwM1wifSIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE3MTI4NDcyNjIsImF1dGhvcml0aWVzIjpbInRlc3QiXSwianRpIjoiNjk2ZTgyODktZTZiMy00NWY3LWI5ZGQtMTExMWM0MjZjOGI5IiwiY2xpZW50X2lkIjoiWGNXZWJBcHAifQ.8TjwZCWOUA_La_0IxM4NbYx7Dpz8PiSIhUYmfQNBd5s
+
+### 通过AuthParamDto对象申请令牌
+POST {{auth_host}}/auth/oauth/token?client_id=XcWebApp&client_secret=XcWebApp&grant_type=password&username={"username":"stu1","authType":"password","password":"111111"}&password=111111

@@ -1,0 +1,24 @@
+### 上传文件
+POST {{media_host}}/media/upload/coursefile
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="filedata"; filename="头像.jpg"
+Content-Type: application/octet-stream
+
+< C:/Users/86173/Pictures/Camera Roll/头像.jpg
+
+
+### 课程计划绑定视频
+POST {{media_host}}/media/teachplan/association/media
+Content-Type: application/json
+
+{
+  "mediaId": "",
+  "fileName": "",
+  "teachplanId": ""
+}
+
+### 课程计划接触视频绑定
+DELETE {{media_host}}/media/teachplan/association/media/{teachPlanId}/{mediaId}
+
